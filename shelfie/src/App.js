@@ -22,6 +22,7 @@ class App extends Component {
         url:'https://goo.gl/images/aATdwv'}
       ]
     }
+    this.componentDidMount = this.componentDidMount.bind( this );
   };
 
   componentDidMount(){
@@ -33,12 +34,15 @@ class App extends Component {
       })
     })
   }
+
+  
+  
   render() {
     return (
       <div className="App">
         <Header/>
         <Dashboard list = {this.state.list}/>
-        <Form/>
+        <Form componentDidMountFn = {this.componentDidMount}/>
       </div>
     );
   }
