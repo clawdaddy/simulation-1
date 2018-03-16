@@ -42,29 +42,33 @@ export default class Form extends Component {
     }
     render(){
         return(
-            <div>
-                <input 
-                alt = 'imageURL' 
-                onChange = {(e)=>this.handleUrl(e.target.value)} 
-                value={this.state.url}></input>
-                <input 
-                alt = 'name' 
-                onChange = {(e)=>this.handleName(e.target.value)} 
-                value={this.state.name}></input>
-                <input 
-                alt = 'price' 
-                onChange = {(e)=>this.handlePrice(e.target.value)} 
-                value = {this.state.price}></input>
-                <img 
-                alt = 'image'></img>
-                <button 
-                onClick = { () => 
-                    this.handleCancel()}
-                    >Cancel</button>
-                <button
-                onClick = { () => 
-                    this.newProduct()}
-                    >Add to Inventory</button>
+            <div className='form'>
+                <div className='inputs'>
+                    <img 
+                    alt = 'image'></img>
+                    <input 
+                    alt = 'imageURL' 
+                    onChange = {(e)=>this.handleUrl(e.target.value)} 
+                    value={this.state.url}></input>
+                    <input 
+                    alt = 'name' 
+                    onChange = {(e)=>this.handleName(e.target.value)} 
+                    value={this.state.name}></input>
+                    <input 
+                    alt = 'price' 
+                    onChange = {(e)=>this.handlePrice(e.target.value)} 
+                    value = {this.state.price}></input>
+                </div>
+                <div className = 'buttons'>
+                    <button 
+                    onClick = { () => 
+                        this.handleCancel()}
+                        >Cancel</button>
+                    <button
+                    onClick = { () => 
+                        this.newProduct()}
+                        >Add to Inventory</button>
+                </div>
             </div>
         )
     }

@@ -16,7 +16,7 @@ export default class Dashboard extends Component {
         }
     )
         return(
-            <div>Dashboard
+            <div className = 'dashboard'>Dashboard
                 {displayList}
             </div>
             

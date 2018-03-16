@@ -41,8 +41,10 @@ class App extends Component {
     return (
       <div className="App">
         <Header/>
-        <Dashboard list = {this.state.list}/>
-        <Form componentDidMountFn = {this.componentDidMount}/>
+        <div className="body">
+          <Dashboard list = {this.state.list}/>
+          <Form componentDidMountFn = {this.componentDidMount}/>
+        </div>
       </div>
     );
   }
