@@ -50,6 +50,8 @@ header{
   justify-content: space-around;
   align-content: space-around;
   align-items: flex-start;
+  height:800px;
+  width:300px;
 }
 
 .body{
@@ -74,6 +76,14 @@ header{
 
 }
 
-.buttons{
+.name{
+display:flex;
 
+}
+.product{
+  display:flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+  background-color:#D34735;
 }

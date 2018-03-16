@@ -4,10 +4,12 @@ export default function Product(props){
     const {name, url, price} = props;
     console.log(props);
     return (
-        <div>
+        <div className = 'product'>
             <img src={url}></img>
-            <p>{name}</p>
-            <p>{price}</p>
+            <div className = 'name'>
+                <p >{name}</p>
+                <p >{price}</p>
+            </div>
         </div>
     )
 }
