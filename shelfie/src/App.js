@@ -4,6 +4,7 @@ import './App.css';
 import Header from './Component/Header/Header';
 import Dashboard from './Component/Dashboard/Dashboard';
 import Form from './Component/Form/Form';
+import axios from 'axios';
 
 class App extends Component {
   constructor(){
@@ -22,6 +23,16 @@ class App extends Component {
       ]
     }
   };
+
+  componentDidMount(){
+    axios.get(`http://localhost:3005/api/inventory`).then( 
+      (res) => {
+        console.log(res);
+        this.setState({
+          list:res.data
+      })
+    })
+  }
   render() {
     return (
       <div className="App">
